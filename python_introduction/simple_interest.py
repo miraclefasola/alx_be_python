@@ -3,6 +3,6 @@
 principal = 1000
 rate = 0.01
 time = 3
-interest = principal*interest*time
+interest = principal*rate*time
 
 Print (f "simple interest is:{interest}")
