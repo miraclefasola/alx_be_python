@@ -5,4 +5,4 @@ rate = 0.05
 time = 3
 interest = principal*rate*time
 
-Print (f "simple interest is:{interest}")
+Print (f"simple interest is:{interest}")
