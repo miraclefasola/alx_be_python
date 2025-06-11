@@ -16,4 +16,4 @@ if temperature_type == "c":
 elif temperature_type == "f":
     print(convert_to_celsius(temperature))
 else:
-    print("input a valid temperature and temperature type")
+    print("Invalid temperature. Please enter a numeric value.")
