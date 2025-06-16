@@ -3,8 +3,12 @@ class BankAccount:
         self.account_balance = account_balance
 
     def deposit(self, deposit_amount):
+
+        if deposit_amount <= 0:
+            return "input an invalid amount"
         self.account_balance += deposit_amount
         return deposit_amount
+
 
     def withdraw(self, withdraw_amount):
 
@@ -13,4 +17,4 @@ class BankAccount:
         self.account_balance -= withdraw_amount
         return True
     def display_balance(self):
-        print (f"Current Balance: ${self.account_balance}")
+        print (f"Current Balance: ${self.account_balance:.2f}")
