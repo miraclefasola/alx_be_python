@@ -15,7 +15,7 @@ class Library:
         self._books.append(book)
         print(f"{book} has been added to the library.")
 
-    def return_book(self):
+    def check_out_book(self):
         title = input("Enter the title of the book to return: ")
         for book in self._books:
             if book.title == title:
@@ -28,7 +28,8 @@ class Library:
 
 
 
-    def return_book(self, title):
+    def return_book(self):
+        title = input("Enter the title of the book: ")
         for book in self._books:
             if book.title == title and book._is_checked_out == True:
                 book._is_checked_out = False
