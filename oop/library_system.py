@@ -2,12 +2,18 @@ class Book:
     def __init__(self, title, author):
         self.title = title
         self.author = author
+    def __str__(self):
+        return f"Title: {self.title}, Author: {self.author}"
+
+
 class EBook(Book):
     def __init__(self, title, author, file_size: int):
         if not isinstance(file_size, int):
             raise TypeError("File size must be an integer")
         super().__init__(title, author)
         self.file_size = file_size
+    def __str__(self):
+        return f"Title: {self.title}, Author: {self.author}, File Size: {self.file_size}"
 
 
 class PrintBook(Book):
@@ -16,6 +22,9 @@ class PrintBook(Book):
             raise TypeError("Page count must be an integer")
         super().__init__(title, author)
         self.page_count = page_count
+
+    def __str__(self):
+        return f"Title: {self.title}, Author: {self.author}, Page Count: {self.page_count}"
 
 
 class Library:
